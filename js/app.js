@@ -7,7 +7,7 @@ var showQuestion = function(question) {
 	console.log(result);
 	
 	// Set the question properties in result
-	var questionElem = result.find('.question-text a');
+	var questionElem = result.find('.question-text');
 	console.log(questionElem);
 	questionElem.attr('href', question.link);
 	questionElem.text(question.title);
@@ -50,13 +50,13 @@ var showAnswerer = function (answerer){
 
 
 	// set the score  in result
-	var userScore = result.find('.score a');
+	var userScore = result.find('.score');
 	
 	userScore.text(answerer.score);
 	
 
 	// set the Post count for question property in result
-	var postCount = result.find('.post-count a');
+	var postCount = result.find('.post-count');
 	postCount.text(answerer.post_count);
 
 	var $topUser = $('.answerer:first-child');
